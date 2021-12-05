@@ -1,11 +1,14 @@
-var http = require('http');
-var handler = require('./handler');
+const express = require('express');
+const server = express();
 
-var port = 1337;
+const port = process.env.PORT || 3001;
+const bodyParser = require('body-parser');
+const routes = require('./routes');
 
-var ip = '127.0.0.1';
+// server.use(bodyParser.urlencoded({ extended: true }));
+server.use(bodyParser.json());
 
-var server = http.createServer(handler.requestHandler);
-console.log(`Server listening on ${ip}:${port}`)
+routes(server);
+server.listen(port);
 
-server.listen(port, ip);
+console.log(`Server listening on port ${port}`)

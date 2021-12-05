@@ -3,16 +3,11 @@ import Navbar from './Navbar'
 import NewItem from './NewItem'
 import Search from './Search'
 import List from './List'
-import ListEntry from './ListEntry'
 import Footer from './Footer'
 
 export default function App() {
 
-  const sampleItems = [
-    {name: 'Item 1', checked: false, id: 1},
-    {name: 'Item 2', checked: true, id: 2},
-    {name: 'Item 3', checked: false, id: 3}
-  ]
+  const sampleItems = []
 
   const [list, setList] = React.useState(sampleItems);
 

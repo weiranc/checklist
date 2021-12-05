@@ -16,6 +16,7 @@ var requestHandler = function(request, response) {
   var headers = defaultCorsHeaders;
 
   console.log('Serving request type ' + request.method);
+  console.log(request)
 
   if (method === 'GET') {
     statusCode = 200;
