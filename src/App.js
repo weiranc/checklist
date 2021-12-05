@@ -21,8 +21,6 @@ export default function App() {
 
   const newList = list.concat(newItem)
 
-  console.log(list)
-
   return (
     <div className="App">
       <Navbar />
